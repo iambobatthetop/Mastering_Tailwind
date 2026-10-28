@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "tailwindcss";
+@theme {
+  --text-mammoth: 4rem;
+  --font-body: 'Nunito'
+  
+}
+
+.card {
+  @apply bg-white rounded overflow-hidden shadow-md;
+}
+
+.badge {
+  @apply absolute top-2 left-2 text-gray-400 font-bold text-xs bg-gray-200 rounded-full p-2;
+}
