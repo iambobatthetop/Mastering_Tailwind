@@ -6,10 +6,20 @@
   
 }
 
-.card {
-  @apply bg-white rounded overflow-hidden shadow-md;
-}
+@layer components {
+  .card {
+    @apply bg-white rounded overflow-hidden shadow-md;
+  }
 
-.badge {
-  @apply absolute top-2 left-2 text-gray-400 font-bold text-xs bg-gray-200 rounded-full p-2;
+  .badge {
+    @apply absolute top-2 left-2 text-gray-400 font-bold text-xs bg-gray-200 rounded-full p-2;
+  }
+
+  .button {
+    @apply text-red-400 px-4 py-2 rounded-md transition-colors cursor-pointer;
+  }
+
+  .button-primary {
+    @apply bg-red-400 text-white hover:bg-red-500;
+  }
 }

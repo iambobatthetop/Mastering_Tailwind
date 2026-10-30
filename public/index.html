@@ -6,26 +6,43 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body class="text-gray-400 font-body">
-    <div> <!--content wrapper-->
+    <div class="grid md:grid-cols-3"> <!--content wrapper-->
 
-        <div>
-            <nav>
-                <div>
-                <h1 class="font-black uppercase p-4 border-gray-100 text-mammoth font-body
-                "> <a href="/">Food Ninja</a></h1>
-                <ul>
-                    <li class="text-gray-700 font-bold"> 
-                        <a href="#"><span>Home</span></a>
+        <div class="md:col-span-1 md:flex md:justify-end">
+            <nav class="md:text-right">
+                <div class="flex justify-between items-center">
+                <h1 class="font-black uppercase p-4 border-gray-100 text-mammoth font-body">
+                     <a href="/" class="hover:text-gray-700">Food Ninja</a></h1>
+
+                     <div class="px-4 cursor-pointer md:hidden" id="burger">
+                        <img class="w-6" src="img/menu.png" alt="menu">
+
+                     </div>
+                <ul class="hidden md:block" id="menu">
+                    <li class="text-gray-700 font-bold py-1"> 
+                        <a href="#">
+                            <img class="inline-block w-4" src="img/home.png" alt="" aria-hidden="true">
+                            <span class="mx-2">Home</span>
+                            
+
+                        </a>
                         
                     </li>
 
-                    <li> 
-                        <a href="#"><span>About</span></a>
+                    <li class="text-gray-700 font-bold py-1"> 
+                        <img class="w-4 inline-block" src="img/about.png" alt="" aria-hidden="true">
+                        <a href="#"><span class="mx-2">About</span>
+                            
+
+                        </a>
                         
                     </li>
 
-                    <li> 
-                        <a href="#"><span>Contact</span></a>
+                    <li class="text-gray-700 font-bold py-1"> 
+                        <img class="w-4 inline-block" src="img/contact-mail.png" alt="" aria-hidden="true">
+                       
+                        <a href="#"><span class="mx-2">Contact</span>
+                             </a>
                         
                     </li>
                 </ul>
@@ -33,10 +50,11 @@
             </nav> 
         </div> <!--end nav-->
 
-        <main class="px-4 py-6 bg-gray-100">
-            <div class="flex justify-center md:justify-end">
-                <a href="#" class="text-red-400">Log in</a>
-                <a href="#" class="text-red-400 ml-2">Sign Up</a>
+        <main class="px-4 md:px-8 py-6 bg-gray-100 col-span-2">
+            <div class="flex justify-center md:justify-end gap-2">
+                
+                <a href="#" class="button ml-2 border-red-400 border-2 hover:bg-red-400 hover:text-white">Sign Up</a>
+                <a href="#" class="button border-red-400 border-2 hover:bg-red-400 hover:text-white">Log in</a>
             </div>
 
             <header>
@@ -47,11 +65,19 @@
             <div>
                 <h4 class="font-bold mt-12 pb-2 border-b border-gray-200"> Latest Recipes</h4>
 
-                <div class="mt-8"> <!--Cards sit here-->
-                    <div class="card">
+                <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-10"> 
+                    <!--Cards sit here-->
+                    <div class="card w-full hover:shadow-lg">
                         <div class="relative">
-                            <img src="img/stew.jpg" alt="stew">
+                            <img class="w-full" src="img/stew.jpg" alt="stew">
                             <div class="badge">
+                                <svg class="w-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" 
+                                viewBox="0 0 24 24" 
+                                strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" 
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+
                                 <span>25 min</span>
                             </div>
                         </div>
@@ -59,10 +85,19 @@
                             <span class="font-bold"> 5 Bean Chilli Stew</span>
                             <span class="block text-gray-500 text-sm">Recipe by Mario</span>
                         </div>
+                        </div>
+                   
+                    <div class="card w-full hover:shadow-lg">
 
                         <div class="relative">
-                            <img src="img/noodles.jpg" alt="noodles">
+                            <img class="w-full" src="img/noodles.jpg" alt="noodles">
                             <div class="badge">
+                                <svg class="w-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" 
+                                viewBox="0 0 24 24" 
+                                strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" 
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
                                 <span>25 min</span>
                             </div>
                         </div>
@@ -70,10 +105,19 @@
                             <span class="font-bold"> Veg Noodles</span>
                             <span class="block text-gray-500 text-sm">Recipe by Mario</span>
                         </div>
+                        </div>
+
+                    <div class="card w-full hover:shadow-lg">
 
                         <div class="relative">
-                            <img src="img/curry.jpg" alt="stew">
+                            <img class="w-full" src="img/curry.jpg" alt="stew">
                             <div class="badge">
+                                <svg class="w-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" 
+                                viewBox="0 0 24 24" 
+                                strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" 
+                                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
                                 <span>25 min</span>
                             </div>
                         </div>
@@ -81,17 +125,19 @@
                             <span class="font-bold">Tofu Curry </span>
                             <span class="block text-gray-500 text-sm">Recipe by Mario</span>
                         </div>
+                        </div>
+                        </div>
 
                         <h4 class="font-bold mt-12 pb-2 border-b border-gray-200"> Most Popular</h4>
                         <div class="mt-8"> <!--Cards sit here-->
-
+ 
                         </div>
  
                         <div class="flex justify-center">
-                            <div class="bg-gray-400 text-black"> Load More </div>
+                            <button type="button" class="button button-primary hover: shadow-inner">Load More</button>
                             
                         </div>
-                    </div>
+                    
 
 
 
@@ -109,4 +155,5 @@
     </div>
     
 </body>
+<script src="index.js"></script>
 </html>
