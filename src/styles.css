@@ -1,22 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --text-mammoth: 4rem;
-  --font-body: 'Nunito'
-  
+  --font-body: 'Nunito';
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded overflow-hidden shadow-md;
+    @apply bg-white rounded overflow-hidden shadow-md transition-colors duration-200 dark:bg-gray-800 dark:text-gray-100;
   }
 
   .badge {
-    @apply absolute top-2 left-2 text-gray-400 font-bold text-xs bg-gray-200 rounded-full p-2;
+    @apply absolute top-2 left-2 text-gray-400 font-bold text-xs bg-gray-200 rounded-full p-2 dark:bg-gray-700 dark:text-gray-200;
   }
 
   .button {
     @apply text-red-400 px-4 py-2 rounded-md transition-colors cursor-pointer;
+  }
+
+  .theme-toggle {
+    @apply flex h-10 w-10 items-center justify-center rounded-md p-0;
   }
 
   .button-primary {
