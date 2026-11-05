@@ -17,6 +17,24 @@
     @apply absolute top-2 left-2 text-gray-400 font-bold text-xs bg-gray-200 rounded-full p-2 dark:bg-gray-700 dark:text-gray-200;
   }
 
+  .nav-icon,
+  .menu-icon {
+    @apply block object-contain transition-all duration-200;
+  }
+
+  .nav-icon {
+    @apply h-4 w-4;
+  }
+
+  .menu-icon {
+    @apply h-6 w-6;
+  }
+
+  .dark .nav-icon,
+  .dark .menu-icon {
+    filter: brightness(0) invert(1);
+  }
+
   .button {
     @apply text-red-400 px-4 py-2 rounded-md transition-colors cursor-pointer;
   }
